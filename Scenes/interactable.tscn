@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://k8r3vpkbkafq"]
+
+[ext_resource type="Script" uid="uid://dr36ii0agfxhv" path="res://Scripts/intaractable.gd" id="1_aewl3"]
+[ext_resource type="Texture2D" uid="uid://dojiowbatc02g" path="res://Assets/GreyboxTextures/greybox_blue_grid.png" id="1_o26tp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h335c"]
+albedo_texture = ExtResource("1_o26tp")
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_kt1gk"]
+material = SubResource("StandardMaterial3D_h335c")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_aewl3"]
+
+[node name="Interactable" type="Node3D"]
+
+[node name="Area3D" type="Area3D" parent="."]
+script = ExtResource("1_aewl3")
+interaction_text = "YIPEE"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+mesh = SubResource("BoxMesh_kt1gk")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_aewl3")
