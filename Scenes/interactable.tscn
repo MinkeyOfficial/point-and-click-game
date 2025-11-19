@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://k8r3vpkbkafq"]
 
-[ext_resource type="Script" uid="uid://dr36ii0agfxhv" path="res://Scripts/intaractable.gd" id="1_aewl3"]
+[ext_resource type="Script" uid="uid://din42vw4ss7ep" path="res://Scripts/interactable_NPC.gd" id="1_73reo"]
 [ext_resource type="PackedScene" uid="uid://ceclp73pmp0aj" path="res://Assets/NPC.glb" id="3_73reo"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x0tmm"]
@@ -10,10 +10,10 @@ height = 2.126587
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pmsje"]
 radius = 0.3046875
 
-[node name="Interactable" type="Node3D"]
+[node name="NPC" type="Node3D"]
 
 [node name="Area3D" type="Area3D" parent="."]
-script = ExtResource("1_aewl3")
+script = ExtResource("1_73reo")
 interaction_text = "YIPEE"
 interaction_distance = 1.0
 disengage_distance = 1.5
