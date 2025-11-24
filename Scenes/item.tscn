@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dqmt5kob4ylcu"]
+
+[ext_resource type="Script" uid="uid://bqn2mmvbettmk" path="res://Scripts/item.gd" id="1_ys0gr"]
+[ext_resource type="Texture2D" uid="uid://tuxxtce0lj7p" path="res://Assets/GreyboxTextures/greybox_green_grid.png" id="2_76mu4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_76mu4"]
+size = Vector3(1.4389648, 1.4500732, 1.3665161)
+
+[sub_resource type="BoxMesh" id="BoxMesh_u06aw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u06aw"]
+albedo_texture = ExtResource("2_76mu4")
+uv1_triplanar = true
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_76mu4"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="Area3D" type="Area3D"]
+script = ExtResource("1_ys0gr")
+item_name = "Kostka"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.0008544922, 0.026453495, 0.00340271)
+shape = SubResource("BoxShape3D_76mu4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("BoxMesh_u06aw")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_u06aw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_76mu4")

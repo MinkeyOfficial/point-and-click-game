@@ -13,3 +13,7 @@ config_version=5
 config/name="ARPG"
 run/main_scene="uid://c6oujvs5o7gpn"
 config/features=PackedStringArray("4.5", "Forward Plus")
+
+[autoload]
+
+PlayerInventory="*res://Scripts/inventory.gd"
