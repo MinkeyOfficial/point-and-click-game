@@ -1,11 +1,10 @@
-[gd_scene load_steps=21 format=3 uid="uid://c6oujvs5o7gpn"]
+[gd_scene load_steps=20 format=3 uid="uid://c6oujvs5o7gpn"]
 
 [ext_resource type="Script" uid="uid://bkx70yiwjay48" path="res://Scripts/main.gd" id="1_8gbba"]
 [ext_resource type="Texture2D" uid="uid://dapbovwr2d375" path="res://Assets/GreyboxTextures/greybox_grey_grid.png" id="1_jjgbg"]
 [ext_resource type="Texture2D" uid="uid://bbhxql2qbv1t8" path="res://Assets/GreyboxTextures/greybox_light_grid.png" id="2_8gbba"]
 [ext_resource type="PackedScene" uid="uid://d2r4k2igjkyqk" path="res://Scenes/player.tscn" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://k8r3vpkbkafq" path="res://Scenes/interactable.tscn" id="5_kry3j"]
-[ext_resource type="PackedScene" uid="uid://ce0mvvfik41u5" path="res://Scenes/barrel.tscn" id="6_21xkr"]
 [ext_resource type="PackedScene" uid="uid://760ygsxh3mqv" path="res://Scenes/door.tscn" id="8_344ge"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bo1nx"]
@@ -94,9 +93,6 @@ data = {
 
 [node name="Interactable" parent="NavigationRegion3D" instance=ExtResource("5_kry3j")]
 transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, -1.838, 0.5, 5.836)
-
-[node name="Barrel" parent="NavigationRegion3D" instance=ExtResource("6_21xkr")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.52914697, 0.4942941, 3.2808936)
 
 [node name="door" parent="." instance=ExtResource("8_344ge")]
 transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 5.6544394, 0.49429405, 0.66224766)
