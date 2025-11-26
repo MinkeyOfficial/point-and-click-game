@@ -8,11 +8,11 @@ class_name Interactable
 
 func interact():
 	print("Interacted with: ", name)
-	show_text(interaction_text)
+#	show_text(interaction_text)
 
-func show_text(text):
-	var ui = get_tree().root.get_node("Main/UI")
-	if ui:
-		ui.show_interaction_text(text)
-	else:
-		print(text)
+#func show_text(text):
+#	var ui = get_tree().root.get_node("Main/UI")
+#	if ui:
+#		ui.show_interaction_text(text)
+#	else:
+#		print(text)

@@ -16,7 +16,8 @@ func interact():
 	is_turning_to_player = true
 	is_turning_back = false
 	is_interacting = true
-	show_text(interaction_text)
+#	show_text(interaction_text)
+	Dialogic.start('part1.timeline')
 
 
 func end_interaction():
@@ -50,8 +51,8 @@ func _turn_towards(target_pos: Vector3, delta: float):
 	if abs(rotation.y - target_rotation) < 0.05:
 		rotation.y = target_rotation
 		is_turning_to_player = false
-		if interaction_text != "":
-			show_text(interaction_text)
+#		if interaction_text != "":
+#			show_text(interaction_text)
 
 
 func _turn_back(delta: float):
@@ -61,9 +62,9 @@ func _turn_back(delta: float):
 		is_turning_back = false
 
 
-func show_text(text):
-	var ui = get_tree().root.get_node("Main/UI")
-	if ui:
-		ui.show_interaction_text(text)
-	else:
-		print(text)
+#func show_text(text):
+#	var ui = get_tree().root.get_node("Main/UI")
+#	if ui:
+#		ui.show_interaction_text(text)
+#	else:
+#		print(text)

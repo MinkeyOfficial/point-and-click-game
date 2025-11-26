@@ -1,0 +1,6 @@
+"Old dude.character": Hej, co tu chceš ty pobudo.
+Pyotr.character: Nic, debílku. Jak se mám dostat přes ty dveře?
+if PlayerInventory.has_item("Zmrzlina") == true:
+	"Old dude.character": Potřebuješ najít klíč.
+elif :
+	"Old dude.character": Až mi dáš zmrzlinu, tak se můžeme bavit.
